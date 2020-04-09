@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='Webots tutorial 翻譯內容.html'>Webots tutorial 翻譯內容</a><ul class='dropdown'><li><a href='Propeller.html'>Propeller</a><li><a href='RotationalMotor.html'>RotationalMotor</a><li><a href='Speaker.html'>Speaker</a><li><a href='Track.html'>Track</a></li></ul><li class='has-children'><a href='每週進度.html'>每週進度</a><ul class='dropdown'><li><a href='week1.html'>week1</a><li><a href='week2.html'>week2</a><li><a href='week3.html'>week3</a><li><a href='week5.html'>week5</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='直播內容.html'>直播內容</a><ul class='dropdown'><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W5.html'>W5</a></li></ul><li class='has-children'><a href='Webots tutorial 翻譯內容.html'>Webots tutorial 翻譯內容</a><ul class='dropdown'><li><a href='Propeller.html'>Propeller</a><li><a href='RotationalMotor.html'>RotationalMotor</a><li><a href='Speaker.html'>Speaker</a><li><a href='Track.html'>Track</a></li></ul><li class='has-children'><a href='每週進度.html'>每週進度</a><ul class='dropdown'><li><a href='week1.html'>week1</a><li><a href='week2.html'>week2</a><li><a href='week3.html'>week3</a><li><a href='week5.html'>week5</a></li>
                       </ul>
                 </nav>
               </div>
@@ -155,7 +155,36 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Webots tutorial 翻譯內容 << <a href='Webots tutorial 翻譯內容.html'>Previous</a> <a href='RotationalMotor.html'>Next</a> >> RotationalMotor<br /><h1>Propeller</h1>
-<br />Webots tutorial 翻譯內容 << <a href='Webots tutorial 翻譯內容.html'>Previous</a> <a href='RotationalMotor.html'>Next</a> >> RotationalMotor</div>
+<p>螺旋槳</p>
+<p><img alt="" height="232" src="./../images/螺旋1.JPG" width="700"/></p>
+<p>Description 描述</p>
+<p>The <span><a href="https://cyberbotics.com/doc/reference/propeller#propeller">Propeller</a></span> node can be used to model a marine or an aircraft propeller. When its device field is set with a <a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a>, the propeller turns the motor angular velocity into a thrust and a (resistant) torque. The resultant thrust is the product of a real number T by the unit length shaft axis vector defined in the shaftAxis field, with T given by the formula:</p>
+<p>螺旋槳節點可用於對海軍陸戰隊或飛機螺旋槳建模。 當其設備字段設置為<span>RotationalMotor</span>時，螺旋槳會將電動機角速度轉換為推力和（阻力）轉矩。 合成推力是實數<span>T</span>與<span>shaftAxis</span>字段中定義的單位長度軸軸線矢量的乘積，其中<span>T</span>由下式給出：</p>
+<p><img alt="" height="51" src="./../images/螺旋2.JPG" width="706"/></p>
+<p>Where t1 and t2 are the constants specified in the thrustConstants field, omega is the motor angular velocity and V is the component of the linear velocity of the center of thrust along the shaft axis. The thrust is applied at the point specified within the centerOfThrust field. The resultant torque is the product of a real number Q by the unit length shaft axis vector, with Q given by the formula:</p>
+<p>其中<span>t1</span>和<span>t2</span>是推力常數字段中指定的常數，ω是電動機角速度，<span>V</span>是推力中心沿軸心的線速度的分量。 推力施加在<span>centerOfThrust</span>字段內指定的點上。 合成轉矩是實數<span>Q</span>與單位長度軸軸線矢量的乘積，<span>Q</span>由下式給出：</p>
+<p><img alt="" height="52" src="./../images/螺旋3.JPG" width="710"/></p>
+<p>Where q1 and q2 are the constants specified in the torqueConstants field.</p>
+<p>其中<span>q1</span>和<span>q2</span>是<span>torqueConstants</span>字段中指定的常數。</p>
+<p>The above formulae are based on "Guidance and Control of Ocean Vehicles" from Thor I. Fossen and "Helicopter Performance, Stability, and Control" from Raymond W. Prouty.</p>
+<p> 以上公式基於<span>Thor I. Fossen</span>的“海洋車輛的指導和控制”和<span>Raymond W. Prouty</span>的“直升機性能，穩定性和控制”。</p>
+<p>Theexample"propeller.wbt"locatedinthe "projects/samples/devices/worlds" directory of Webots shows three different helicopters modeled with <span><a href="https://cyberbotics.com/doc/reference/propeller#propeller">Propeller</a></span> nodes.</p>
+<p>位於<span>Webots</span>的“<span> projects / samples / devices / worlds</span>”目錄中的示例“<span> propeller.wbt</span>”顯示了用<u>Propeller</u>節點建模的三種不同的直升機。</p>
+<p>Field Summary 領域摘要</p>
+<ul>
+<li><strong>shaftAxis</strong><strong>: </strong>defines the axis along which the resultant thrust and torque will be exerted, see <span><a href="https://cyberbotics.com/doc/reference/propeller#propeller-axis">this figure</a></span>.</li>
+<li><strong>shaftAxis</strong><strong>：</strong>定義將沿其施加合成推力和扭矩的軸線，請參見此圖</li>
+<li><strong>centerOfThrust</strong><strong>:</strong> defines the point where the generated thrust applies, see <span><a href="https://cyberbotics.com/doc/reference/propeller#propeller-axis">this figure</a></span>.</li>
+<li><strong>centerOfThrust</strong><strong>：</strong>定義生成的推力施加的點，請參見此圖。</li>
+<li><strong>thrustConstants</strong><strong>and </strong><strong>torqueConstants</strong><strong>:</strong> coefficients used to define the resultant thrust and torque as functions of the motor angular velocity and the linear speed of adavance, see above formulae.</li>
+<li><strong>推力常數和轉矩常數：</strong>用於定義合成推力和轉矩作為電動機角速度和直線速度的函數的係數，請參見上式。</li>
+<li><strong>fastHelixThreshold</strong><strong>: </strong>threshold in [rad/s]from which the helix representation is switched from slowHelix tofastHelix. The default value equals to 24π [rad/s].</li>
+<li><strong>fastHelixThreshold</strong><strong>：</strong>閾值，以<span>[rad / s]</span>為單位，從該閾值將螺旋表示形式從<span>slowHelix</span>切換到<span>fastHelix</span>。 默認值等於<span>24</span>π<span>[rad / s]</span>。</li>
+<li><strong>device</strong><strong>:</strong> this field has to be set with a <a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a>in order to control the propeller.</li>
+<li><strong>設備：</strong>必須使用<span>RotationalMotor</span>設置此字段才能控制螺旋槳。</li>
+<li><strong>fastHelix</strong><strong>and </strong><strong>slowHelix</strong>: if not NULL, these fields must be set with <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> The corresponding <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> nodes define the graphical representation of the propeller according to its motor's angular velocity omega: if |omega| &gt;fastHelixThreshold, only the <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> defined in fastHelix is visible, otherwise only the <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> defined in slowHelix is visibler.</li>
+<li><strong>fastHelix</strong><strong>和<span>slowHelix</span>：</strong>如果不為<span>NULL</span>，則必須使用實體節點設置這些字段。 相應的實體節點根據螺旋槳的電動機角速度ω定義螺旋槳的圖形表示：<span>if | omega | &gt;fastHelixThreshold</span>，僅在<span>fastHelix</span>中定義的實體可見，否則僅在<span>slowHelix</span>中定義的實體可見。</li>
+</ul><br />Webots tutorial 翻譯內容 << <a href='Webots tutorial 翻譯內容.html'>Previous</a> <a href='RotationalMotor.html'>Next</a> >> RotationalMotor</div>
         
     <!-- footer -->
       <div class="container">

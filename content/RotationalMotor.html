@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='Webots tutorial 翻譯內容.html'>Webots tutorial 翻譯內容</a><ul class='dropdown'><li><a href='Propeller.html'>Propeller</a><li><a href='RotationalMotor.html'>RotationalMotor</a><li><a href='Speaker.html'>Speaker</a><li><a href='Track.html'>Track</a></li></ul><li class='has-children'><a href='每週進度.html'>每週進度</a><ul class='dropdown'><li><a href='week1.html'>week1</a><li><a href='week2.html'>week2</a><li><a href='week3.html'>week3</a><li><a href='week5.html'>week5</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='直播內容.html'>直播內容</a><ul class='dropdown'><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W5.html'>W5</a></li></ul><li class='has-children'><a href='Webots tutorial 翻譯內容.html'>Webots tutorial 翻譯內容</a><ul class='dropdown'><li><a href='Propeller.html'>Propeller</a><li><a href='RotationalMotor.html'>RotationalMotor</a><li><a href='Speaker.html'>Speaker</a><li><a href='Track.html'>Track</a></li></ul><li class='has-children'><a href='每週進度.html'>每週進度</a><ul class='dropdown'><li><a href='week1.html'>week1</a><li><a href='week2.html'>week2</a><li><a href='week3.html'>week3</a><li><a href='week5.html'>week5</a></li>
                       </ul>
                 </nav>
               </div>
@@ -155,7 +155,21 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Propeller << <a href='Propeller.html'>Previous</a> <a href='Speaker.html'>Next</a> >> Speaker<br /><h1>RotationalMotor</h1>
-<br />Propeller << <a href='Propeller.html'>Previous</a> <a href='Speaker.html'>Next</a> >> Speaker</div>
+<p>旋轉馬達</p>
+<p>Derived from <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/motor" style="color: #ff0000;">Motor</a></span>.</p>
+<p>源自<span style="color: #ff0000;">電機</span>。</p>
+<p><img alt="" height="120" src="./../images/馬達1.JPG" width="627"/></p>
+<p>Description 描述</p>
+<p style="text-align: justify; text-justify: inter-ideograph; line-height: 16.8pt; background: white; margin: 0cm 7.5pt .0001pt 7.5pt;"><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: black;">A </span><span lang="EN-US"><a href="https://cyberbotics.com/doc/reference/rotationalmotor#rotationalmotor"><span style="font-family: '微軟正黑體','sans-serif'; color: red;">RotationalMotor</span></a></span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: red;"> </span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: black;">node can be used to power either a</span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: red;"> <a href="https://cyberbotics.com/doc/reference/hingejoint"><span style="color: red;">HingeJoint</span></a></span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: black;"> or a </span><span lang="EN-US"><a href="https://cyberbotics.com/doc/reference/hinge2joint"><span style="font-family: '微軟正黑體','sans-serif'; color: red;">Hinge2Joint</span></a></span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: black;"> to produce a rotational motion around the choosen axis.<o:p></o:p></span></p>
+<p style="text-align: justify; text-justify: inter-ideograph; line-height: 16.8pt; background: white; margin: 0cm 7.5pt .0001pt 7.5pt;"><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: red;">RotationalMotor</span><span style="font-family: '微軟正黑體','sans-serif'; color: black;">節點可用於為</span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: red;">HingeJoint</span><span style="font-family: '微軟正黑體','sans-serif'; color: black;">或</span><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: red;">Hinge2Joint</span><span style="font-family: '微軟正黑體','sans-serif'; color: black;">供電，以產生圍繞所選軸的旋轉運動。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p style="text-align: justify; text-justify: inter-ideograph; line-height: 16.8pt; background: white; margin: 0cm 7.5pt .0001pt 7.5pt;"><span style="font-family: '微軟正黑體','sans-serif'; color: black;"></span></p>
+<p style="text-align: justify; text-justify: inter-ideograph; line-height: 16.8pt; background: white; margin: 0cm 7.5pt .0001pt 7.5pt;"><span style="font-family: '微軟正黑體','sans-serif'; color: black;">Field Summary 領域摘要</span></p>
+<ul>
+<li>The namefield specifies the name identifier of the motor device. This the name to which the wb_robot_get_device function refer. It defaults to "rotational motor"</li>
+<li>名稱字段指定電機設備的名稱標識符。<span> wb_robot_get_device</span>函數引用的名稱。 默認為“旋轉電機”。</li>
+<li>The maxTorquefield specifies both the upper limit and the default value for the motor <em>available torque</em>. The <em>available torque</em> is the torque that is available to the motor to perform the requested motions. It is expressed in <em>newton meter</em> [N⋅m]. The wb_motor_set_available_torque function can be used to change the <em>available torque</em> at run-time. The value of maxTorque should always be zero or positive (the default value is 10 N⋅m). A small maxTorque value may result in a motor being unable to move to the target position because of its weight or other external forces.</li>
+<li>maxTorque字段同時指定了電動機可用轉矩的上限和默認值。可用轉矩是電動機可用於執行請求的運動的轉矩。用牛頓米<span>[N·m]</span>表示。<span>wb_motor_set_available_torque</span>函數可用於在運行時更改可用轉矩。<span>maxTorque</span>的值應始終為零或正（默認值為<span>10N</span>⋅m）。較小的<span>maxTorque</span>值可能會導致電動機由於其重量或其他外力而無法移動到目標位置。</li>
+</ul><br />Propeller << <a href='Propeller.html'>Previous</a> <a href='Speaker.html'>Next</a> >> Speaker</div>
         
     <!-- footer -->
       <div class="container">
