@@ -155,7 +155,56 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Speaker << <a href='Speaker.html'>Previous</a> <a href='每週進度.html'>Next</a> >> 每週進度<br /><h1>Track</h1>
-<br />Speaker << <a href='Speaker.html'>Previous</a> <a href='每週進度.html'>Next</a> >> 每週進度</div>
+<p>軌道</p>
+<p>Derived from <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/solid" style="color: #ff0000;">Solid</a></span>.</p>
+<p>衍生自<span style="color: #ff0000;">Solid</span>。</p>
+<p><img alt="" height="175" src="./../images/跟蹤1.JPG" width="756"/></p>
+<p>The<span style="color: #ff0000;"> <a href="https://cyberbotics.com/doc/reference/track#track" style="color: #ff0000;">Track</a></span> node defines a track object that could be used to model tracks for conveyor belts or tank robots.</p>
+<p><span style="color: #ff0000;"><u>軌道</u></span>節點定義了一個軌道對象，可用於為傳送帶或儲罐機器人建立軌道模型。</p>
+<p>Note that this works only in <em>physics-based</em> simulations. Therefore, the <span style="color: #ff0000;">physics</span> and <span style="color: #ff0000;">boundingObject</span> fields of the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span> node and related <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> nodes must be non-NULL for the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span> node to behave correctly. It is not a requirement that the <span style="color: #ff0000;">boundingObject </span>exactly matches the track belt shape; it is possible to use basic geometries such as boxes and cylinders to specify the external shape of the belt, especially the parts where it may touch the ground or obstacles. A simple example is shown in the <span><a href="https://cyberbotics.com/doc/reference/track#tracks-bounding-object-example">following figure</a></span>.</p>
+<p>請注意，這僅在基於物理的仿真中有效。 因此，“跟踪”節點和相關“實體”節點的<span style="color: #ff0000;">物理場</span>和<span style="color: #ff0000;">boundingObjec</span>t字段必須為非<span>NULL</span>，才能使“跟踪”節點正確運行。 並不一定要求<span style="color: #ff0000;">boundingObject</span>完全匹配履帶的形狀； 可以使用基本的幾何形狀（例如盒子和圓柱體）來指定皮帶的外部形狀，尤其是皮帶可能接觸地面或障礙物的部分。 下圖顯示了一個簡單的示例。</p>
+<p>Additionally, in order to work correctly, the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span> node has to fulfill these conditions:</p>
+<p>此外，為了正常工作，“跟踪”節點必須滿足以下條件：</p>
+<ul>
+<li>the y-axis of the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span>node is parallel to the world up vector.</li>
+<li>the belt and wheels are aligned on a plane perpendicular to the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span>node's z-axis.</li>
+<li>軌跡節點的<span>y</span>軸平行於世界向上向量。</li>
+<li>皮帶和車輪在垂直於“軌跡”節點的<span>z</span>軸的平面上對齊。</li>
+</ul>
+<p><img alt="" height="263" src="./../images/00.JPG" width="524"/></p>
+<p>The device field optionally specifies a<span style="color: #ff0000;"> <a href="https://cyberbotics.com/doc/reference/linearmotor" style="color: #ff0000;">LinearMotor</a></span>, a linear<span style="color: #ff0000;"> <a href="https://cyberbotics.com/doc/reference/positionsensor" style="color: #ff0000;">PositionSensor</a></span> and a <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/brake" style="color: #ff0000;">Brake</a> </span>device. The motor allows to control the motion of the track, and if not specified the track will behave like a fixed joint. Position, velocity or force control can be used but force feedback functions are not available.</p>
+<p>設備字段可選地指定<u><span style="color: #ff0000;">LinearMoto</span>r</u>，線性<span style="color: #ff0000;"><u>PositionSensor</u></span>和<span style="color: #ff0000;"><u>Brake</u></span>設備。 電機允許控制軌道的運動，如果未指定，軌道的行為將類似於固定關節。 可以使用位置，速度或力控制，但力反饋功能不可用。</p>
+<p>The track system doesn't have any default wheel, but it is possible to insert a<span style="color: #ff0000;"> <a href="https://cyberbotics.com/doc/reference/trackwheel" style="color: #ff0000;">TrackWheel</a></span> node in the children field to define an object that will automatically rotate based on the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span> motor speed. Note that the <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/trackwheel" style="color: #ff0000;">TrackWheel</a> </span>node is an abstract wheel and the shape has to be defined by the user.</p>
+<p>跟踪系統沒有默認的滾輪，但是可以在<span>children</span>字段中插入<span style="color: #ff0000;">TrackWheel</span>節點，以定義一個根據<span>Track</span>電動機速度自動旋轉的對象。請注意，<span style="color: #ff0000;">TrackWheel</span>節點是一個抽象輪子，形狀必須由用戶定義。</p>
+<p>Other than the motion, it is also possible to define an animation to show graphically the movement of the track. Two different types of animation are available: texture animation and geometries animation.</p>
+<p>除了運動之外，還可以定義動畫以圖形方式顯示軌蹟的運動。 提供兩種不同類型的動畫：紋理動畫和幾何動畫。</p>
+<p>Note that the track belt is only automatically generated and displayed in case the geometries animation is enabled. Otherwise it can be manually defined by adding the shape in the children field.</p>
+<p>請注意，只有在啟用了幾何圖形動畫的情況下，才會自動生成並顯示履帶。否則，可以通過在子字段中添加形狀來手動定義它。</p>
+<p><span style="color: #0000ff;">Text Animation 動畫</span></p>
+<p>The texture animation is the simplest option and consists in scrolling the texture object in the direction defined in the<span style="color: #ff0000;"> textureAnimation</span> field. This scroll value is combined with the belt velocity in order to update the position of texture at each time step. If the value is <span style="color: #ff0000;">[0 0]</span> the texture will not move. Only the first child of the Track is taken into consideration for texture animation, and it has to be a<span style="color: #ff0000;"> Shape</span>, a <span style="color: #ff0000;">Group</span> node or a Group descendant having a Shape node as its first child. Also note that the Appearance node of the Shape and its<span style="color: #ff0000;"> texture</span> and<span style="color: #ff0000;"> textureTransform</span> fields have to be explicitly defined.</p>
+<p>紋理動畫是最簡單的選項，它包括在<span style="color: #ff0000;">textureAnimation</span>字段中定義的方向上滾動紋理對象。 該滾動值與皮帶速度結合在一起，以便在每個時間步長更新紋理的位置。 如果值為<span style="color: #ff0000;">[0 0]</span>，紋理將不會移動。 對於紋理動畫，僅考慮<span>Track</span>的第一個子節點，並且它必須是<span style="color: #ff0000;">Shape</span>，<span style="color: #ff0000;">Group</span>節點或以<span>Shape</span>節點作為其第一子節點的<span>Group</span>子孫。 還要注意，必須顯式定義<span>Shape</span>的<span>Appearance</span>節點及其<span style="color: #ff0000;">texture</span>和<span style="color: #ff0000;">textureTransform</span>字段。</p>
+<p>Note that the TextureTransform node that is going to be automatically altered by the Track functionality cannot be a USE node.</p>
+<p>請注意，將由“跟踪”功能自動更改的TextureTransform節點不能是<span>USE</span>節點。</p>
+<p><span style="color: #0000ff;">Geometries Animation 幾何公差</span></p>
+<p>The geometries animation consists of a set of pure graphical <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/shape" style="color: #ff0000;">Shape</a></span> objects without physics properties moving along a defined belt path.</p>
+<p>幾何動畫由一組純圖形的<span style="color: #ff0000;"><u>Shape</u></span>對象組成，沒有物理特性沿定義的傳送帶路徑移動。</p>
+<p>The <span style="color: #ff0000;">animatedGeometry</span> field contains the specification of the appearance and geometry of the animated objects.</p>
+<p><span style="color: #ff0000;">animationGeometry</span>字段包含動畫對象的外觀和幾何形狀的規範。</p>
+<p>The <span style="color: #ff0000;">geometriesCount</span> field specifies the number of animated objects that will move along the belt path.</p>
+<p><span style="color: #ff0000;">geometriesCount</span>字段指定將沿著傳送帶路徑移動的動畫對象的數量。</p>
+<p>Note that the geometries animation is enabled only if the<span style="color: #ff0000;"> geometriesCount </span>value is greater than 0 and the <span style="color: #ff0000;">animatedGeometry</span> field is defined.</p>
+<p>請注意，僅當<span style="color: #ff0000;">geometriesCount</span>值大於<span>0</span>且定義了<span style="color: #ff0000;">animationGeometry</span>字段時，才會啟用<span>geometries</span>動畫。</p>
+<p>The belt path along which the animated geometries move is shaped to the<span style="color: #ff0000;"> </span><a href="https://cyberbotics.com/doc/reference/trackwheel"><span style="color: #ff0000;">TrackWhee</span>l</a> nodes contained in the children field. Each wheel contains the information about its center position, its radius and if it is inside or outside the belt. By convention the wheels are all aligned on a plane perpendicular to the <span><a href="https://cyberbotics.com/doc/reference/track#track">Track</a></span> node's z-axis and have to be defined in clockwise order starting from the one with the smallest x-axis position component.</p>
+<p>動畫幾何形狀沿其移動的皮帶路徑的形狀為子字段中包含的<span style="color: #ff0000;"><u>TrackWheel</u></span>節點。每個車輪都包含有關其中心位置，半徑以及是否在皮帶內還是皮帶外的信息。按照慣例，所有輪子都在與“軌跡”節點的<span>z</span>軸垂直的平面上對齊，並且必須從具有最小<span>x</span>軸位置分量的輪子開始按順時針順序定義。</p>
+<p>The following code fragment shows the belt path definition for the convex track example shown in <span><a href="https://cyberbotics.com/doc/reference/track#convex-tracks-belt-shape-example">this figure</a></span>:</p>
+<p>以下代碼片段顯示了此圖中所示的凸軌示例的皮帶路徑定義：</p>
+<p><img alt="" height="489" src="./../images/跟蹤2.JPG" width="602"/></p>
+<p><img alt="" height="278" src="./../images/01.JPG" width="471"/></p>
+<p>Then for a concave track belt shape like the one shown in <span><a href="https://cyberbotics.com/doc/reference/track#concave-tracks-belt-shape-example">this figure</a></span>following <span><a href="https://cyberbotics.com/doc/reference/trackwheel">TrackWheel</a></span> nodes have to be defined:</p>
+<p>然後，對於如圖所示的凹形履帶，必須定義以下TrackWheel節點：</p>
+<p><img alt="" height="315" src="./../images/跟蹤3.JPG" width="596"/></p>
+<p><img alt="" height="265" src="./../images/02.JPG" width="482"/></p>
+<p></p><br />Speaker << <a href='Speaker.html'>Previous</a> <a href='每週進度.html'>Next</a> >> 每週進度</div>
         
     <!-- footer -->
       <div class="container">
