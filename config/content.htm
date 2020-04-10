@@ -16,16 +16,29 @@
 <h1>直播內容</h1>
 <h2>W2</h2>
 <p>直播影片</p>
+<p><span style="color: #0000ff;">組長分配各項工作給組員</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JXUKf0cfJcc" width="560"></iframe></p>
 <p><a href="https://www.youtube.com/watch?v=JXUKf0cfJcc">https://www.youtube.com/watch?v=JXUKf0cfJcc</a></p>
-<p></p><h2>W3</h2>
+<p></p>
+<h2>W3</h2>
 <p>直播影片</p>
+<p><span style="color: #0000ff;">說明python亂數分組程式,及各個細分組長須同時對小組網站進行協同</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/QTfPD5bpeKc" width="560"></iframe></p>
 <p><a href="https://www.youtube.com/watch?v=QTfPD5bpeKc&amp;feature=emb_title">https://www.youtube.com/watch?v=QTfPD5bpeKc&amp;feature=emb_title</a></p>
-<p></p><h2>W5</h2>
+<p></p>
+<h2>W5</h2>
 <p>直播影片</p>
+<p><span style="color: #0000ff;">下載webots及coppliasimedu,各組員進行weborts toturial翻譯</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ElNea4b1dX8" width="560"></iframe></p>
-<p><a href="https://www.youtube.com/watch?v=ElNea4b1dX8">https://www.youtube.com/watch?v=ElNea4b1dX8</a></p><h1>Webots tutorial 翻譯內容</h1><h2>Propeller</h2>
+<p><a href="https://www.youtube.com/watch?v=ElNea4b1dX8">https://www.youtube.com/watch?v=ElNea4b1dX8</a></p>
+<h2>W6</h2>
+<p>直播影片</p>
+<p><span style="color: #0000ff;">1.安裝OBS,影片右下角要有自己的頭像</span><br/><span style="color: #0000ff;">2.安裝pyslvs</span><br/><span style="color: #0000ff;">3.學習Coppeliasim,討論機構設計,進行模擬</span><br/><span style="color: #0000ff;">4.查看TOP0及TOP1的文章</span><br/><span style="color: #0000ff;">5.Handout meet線上上課說明</span></p>
+<p><span></span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/B6jt5OAf424" width="560"></iframe></p>
+<p><a href="https://www.youtube.com/watch?v=B6jt5OAf424">https://www.youtube.com/watch?v=B6jt5OAf424</a></p><h2>W7</h2><h2>W8</h2>
+<p></p><h1>Webots tutorial 翻譯內容</h1>
+<h2>Propeller</h2>
 <p>螺旋槳</p>
 <p><img alt="" height="232" src="/images/螺旋1.JPG" width="700"/></p>
 <p>Description 描述</p>
@@ -55,7 +68,8 @@
 <li><strong>設備：</strong>必須使用<span>RotationalMotor</span>設置此字段才能控制螺旋槳。</li>
 <li><strong>fastHelix</strong><strong>and </strong><strong>slowHelix</strong>: if not NULL, these fields must be set with <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> The corresponding <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> nodes define the graphical representation of the propeller according to its motor's angular velocity omega: if |omega| &gt;fastHelixThreshold, only the <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> defined in fastHelix is visible, otherwise only the <span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a></span> defined in slowHelix is visibler.</li>
 <li><strong>fastHelix</strong><strong>和<span>slowHelix</span>：</strong>如果不為<span>NULL</span>，則必須使用實體節點設置這些字段。 相應的實體節點根據螺旋槳的電動機角速度ω定義螺旋槳的圖形表示：<span>if | omega | &gt;fastHelixThreshold</span>，僅在<span>fastHelix</span>中定義的實體可見，否則僅在<span>slowHelix</span>中定義的實體可見。</li>
-</ul><h2>RotationalMotor</h2>
+</ul>
+<h2>RotationalMotor</h2>
 <p>旋轉馬達</p>
 <p>Derived from <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/motor" style="color: #ff0000;">Motor</a></span>.</p>
 <p>源自<span style="color: #ff0000;">電機</span>。</p>
@@ -70,7 +84,8 @@
 <li>名稱字段指定電機設備的名稱標識符。<span> wb_robot_get_device</span>函數引用的名稱。 默認為“旋轉電機”。</li>
 <li>The maxTorquefield specifies both the upper limit and the default value for the motor <em>available torque</em>. The <em>available torque</em> is the torque that is available to the motor to perform the requested motions. It is expressed in <em>newton meter</em> [N⋅m]. The wb_motor_set_available_torque function can be used to change the <em>available torque</em> at run-time. The value of maxTorque should always be zero or positive (the default value is 10 N⋅m). A small maxTorque value may result in a motor being unable to move to the target position because of its weight or other external forces.</li>
 <li>maxTorque字段同時指定了電動機可用轉矩的上限和默認值。可用轉矩是電動機可用於執行請求的運動的轉矩。用牛頓米<span>[N·m]</span>表示。<span>wb_motor_set_available_torque</span>函數可用於在運行時更改可用轉矩。<span>maxTorque</span>的值應始終為零或正（默認值為<span>10N</span>⋅m）。較小的<span>maxTorque</span>值可能會導致電動機由於其重量或其他外力而無法移動到目標位置。</li>
-</ul><h2>Speaker</h2>
+</ul>
+<h2>Speaker</h2>
 <p>揚聲器</p>
 <p>Derived from <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/device?tab-language=python" style="color: #ff0000;">Device</a></span> and<span style="color: #ff0000;"> <a href="https://cyberbotics.com/doc/reference/solid?tab-language=python" style="color: #ff0000;">Solid</a></span>.</p>
 <p>源自<span style="color: #ff0000;">設備</span>和<span style="color: #ff0000;">實體</span>。</p>
@@ -108,6 +123,22 @@
 <p><img alt="" height="107" src="/images/S2.JPG" width="852"/></p>
 <p>wb speaker stop</p>
 <p><img alt="" height="192" src="/images/s3.JPG" width="850"/></p>
+<p><span style="color: #0000ff;"></span></p>
+<p>wb speaker is sound playing</p>
+<p><img alt="" height="189" src="/images/s4.JPG" width="853"/></p>
+<p><span style="color: #0000ff;">Description 描述</span></p>
+<p>check if the sound is been played</p>
+<p>This function can be used to check if the given sound is currently playing. It can be used for example to check when a sound is over. It is possible to check if the speaker is playing any sound (including text-to-speech) by setting sound to NULL (or to an empty string in object-oriented APIs).</p>
+<p>檢查是否播放了聲音</p>
+<p>此功能可用於檢查給定聲音是否正在播放。 例如，它可以用於檢查聲音何時結束。 通過將聲音設置為<span>NULL</span>（或在面向對象的<span>API</span>中設置為空字符串），可以檢查揚聲器是否正在播放任何聲音（包括文本到語音）。</p>
+<p>wb_speaker_set_engine</p>
+<p>wb_speaker_set_language</p>
+<p>wb_speaker_get_engine</p>
+<p>wb_speaker_get_language</p>
+<p>wb_speaker_is_speaking</p>
+<p>wb_speaker_speak</p>
+<p><img alt="" height="291" src="/images/s5.JPG" width="846"/></p>
+<p></p>
 <p><span style="color: #0000ff;">Description 描述</span></p>
 <p>perform text-to-speech 執行文字轉語音</p>
 <p>The<span style="color: #ff0000;"> wb_speaker_set_</span>engine function allows the user to set the text-to-speech engine that is going to be used by a speaker. The engine parameter should be one of the following values:</p>
@@ -163,7 +194,8 @@
 <li><span style="color: #ff0000;">audio</span>具有一個受支持的參數，即<span>src</span>，用於指定<span>WAV</span>文件。這導致在合成信號中在輸入文本中指定的位置處插入指定的聲音文件。</li>
 </ul>
 <p style="text-align: justify; text-justify: inter-ideograph; line-height: 19.2pt; background: white; margin: 0cm 8.55pt .0001pt 8.55pt;"><span lang="EN-US" style="font-family: '微軟正黑體','sans-serif'; color: black;">Example </span><span style="font-family: '微軟正黑體','sans-serif'; color: black;">例如<span lang="EN-US">:<o:p></o:p></span></span></p>
-<p><img alt="" height="189" src="/images/s6.JPG" width="846"/></p><h2>Track</h2>
+<p><img alt="" height="189" src="/images/s6.JPG" width="846"/></p>
+<h2>Track</h2>
 <p>軌道</p>
 <p>Derived from <span style="color: #ff0000;"><a href="https://cyberbotics.com/doc/reference/solid" style="color: #ff0000;">Solid</a></span>.</p>
 <p>衍生自<span style="color: #ff0000;">Solid</span>。</p>
@@ -213,7 +245,8 @@
 <p>然後，對於如圖所示的凹形履帶，必須定義以下TrackWheel節點：</p>
 <p><img alt="" height="315" src="/images/跟蹤3.JPG" width="596"/></p>
 <p><img alt="" height="265" src="/images/02.JPG" width="482"/></p>
-<p></p><h1>每週進度</h1>
+<p></p>
+<h1>每週進度</h1>
 <h2>week1</h2>
 <p>創建個人倉儲及架設網站</p>
 <p><span style="color: #0000ff;">(1)CD2020個人倉儲</span></p>
